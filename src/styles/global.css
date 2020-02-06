@@ -1,0 +1,7 @@
+/* Model (though have to adapt for Gatsby): https://github.com/jonasschmedtmann/advanced-css-course/tree/master/Natours/final-after-S06 */
+@import "abstract/mixins.scss"; 
+@import "abstract/variables.scss"; 
+
+@import "base/animations.scss";
+@import "base/base.scss";
+@import "base/typography.scss";

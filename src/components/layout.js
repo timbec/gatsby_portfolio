@@ -1,7 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import Nav from './NavBar';
+
 import { rhythm, scale } from "../utils/typography"
+// import "../styles/global.css"
+console.log(rhythm)
 
 const Layout = ({ location, title, subtitle, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -9,7 +13,7 @@ const Layout = ({ location, title, subtitle, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
-      <div>
+      <div className="content-wrapper">
         <h1
         style={{
           ...scale(1.5),
@@ -43,7 +47,7 @@ const Layout = ({ location, title, subtitle, children }) => {
           style={{
             boxShadow: `none`,
             textDecoration: `none`,
-            color: `inherit`,
+            color: `black`,
           }}
           to={`/`}
         >
@@ -55,26 +59,31 @@ const Layout = ({ location, title, subtitle, children }) => {
   return (
     <div
       style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        // marginLeft: `auto`,
+        // marginRight: `auto`,
+        // maxWidth: rhythm(24),
+        // padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
       <header>{header}</header>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-         <li><Link to="#portfolio">Portflio</Link></li>
-         <li><Link to="/about">About</Link></li>
-         <li><Link to="/blog">Blog</Link></li>
-        </ul>
-         </nav>
-      <main>{children}</main>
+      <Nav />
+      <main className="main">
+        {children}
+      </main>
       <footer>
+        <nav id="footer-nav" className="nav">
+          <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="#portfolio">Portflio</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/blog">Blog</Link></li>
+          </ul>
+        </nav>
+        <p>
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </p>
       </footer>
     </div>
   )
