@@ -13,7 +13,13 @@ import { rhythm } from "../../utils/typography"
 
 import "./nav.scss"
 
-const Nav = () => {
+const NavBar = () => {
+
+    const closeNav = () =>  {
+
+        document.body.classList.remove('nav-open');
+    }
+
     return (
         <Fragment>
             <Hamburger />
@@ -21,19 +27,28 @@ const Nav = () => {
                     <ul className="nav__list">
                         <li className="nav__item">
                             <Link className="nav__item--link" 
-                            to="/">Home</Link>
+                            to="/"
+                            onClick={closeNav}
+                            >Home</Link>
                         </li>
                         <li className="nav__item">
                             <Link className="nav__item--link" 
-                            to="#portfolio">Portflio</Link>
+                            to="/#portfolio"
+                            onClick={closeNav}
+                            >Portfolio</Link>
+                        </li>
+                       
+                        <li className="nav__item">
+                            <Link className="nav__item--link" 
+                            to="/about"
+                            onClick={closeNav}
+                            >About</Link>
                         </li>
                         <li className="nav__item">
                             <Link className="nav__item--link" 
-                            to="/about">About</Link>
-                        </li>
-                        <li className="nav__item">
-                            <Link className="nav__item--link" 
-                            to="/blog">Blog</Link>
+                            to="/blog"
+                            onClick={closeNav}
+                            >Blog</Link>
                         </li>
                     </ul>
                 </nav>
@@ -41,4 +56,4 @@ const Nav = () => {
     )
 }
 
-export default Nav;
+export default NavBar;

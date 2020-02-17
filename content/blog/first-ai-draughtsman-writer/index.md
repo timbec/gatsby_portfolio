@@ -5,9 +5,9 @@ description: "Example of what was possibly one of the world's first AI: The Drau
 slug: "first-ai-draughtsman-writer"
 ---
 
-<!-- ![The Draughtsman Writer](./draughtsman_writer.jpg) -->
+![The Draughtsman Writer](./draughtsman_writer.jpg)
 
-<img align="center" width="100%" height="auto" src="draughtsman_writer.jpg">
+<!-- <img align="center" width="100%" height="auto" src="draughtsman_writer.jpg"> -->
 
 I recently saw **The Draughtsman Writer** at a larger exhibit (name?) at the Met, **Technology In the Age of the Court**. Most of the exhibits were clever, if sometimes dazzling: many immensely complicated clockworks, constructed with gold and other precious minerals, but nothing truly blew me away until the exhibits at the show's end, and in particular 'The Draughtsman Writer'. 
 

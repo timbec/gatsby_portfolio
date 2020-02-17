@@ -1,7 +1,6 @@
 @import '../../styles/abstract/variables.scss';
 
 .nav {
-    display: block; 
     position: fixed;
     background: $color-black;
     color: $color-white;
@@ -48,16 +47,22 @@
 
 .nav-toggle {
     padding: .5em;
-    background: transparent;
+    background: $color-black;
     border: 0;
     cursor: pointer;
     position: absolute;
     right: 1em;
     top: 1em;
+    height: 4rem; 
     z-index: 1000;
+
+    &:focus {
+        outline: none; 
+    }
 }
 
 .nav-open .nav {
+    display: block; 
     transform: translateX(0);
 }
 
@@ -80,12 +85,13 @@
 .hamburger {
     display: block;
     position: relative;
+    outline: none; 
 }
 
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-accent);
+    background: $color-white;
     width: 2em;
     height: 3px;
     border-radius: 1em;
