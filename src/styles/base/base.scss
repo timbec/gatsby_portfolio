@@ -22,7 +22,6 @@ body {
 }
 
 ::selection {
-<<<<<<< HEAD
     background-color: $color-black;
     color: $color-white;
 }
@@ -31,18 +30,3 @@ body {
     max-width: 120rem; 
     margin: 0 auto; 
 }
-=======
-  background-color: $color-black;
-  color: $color-white;
-}
-
-.container {
-  display: grid;
-
-  @media only screen and (max-width: $bp-large) {
-  }
-
-  @media only screen and (max-width: $bp-medium) {
-  }
-}
->>>>>>> 47e78a6cbd6747f5d316beda3fa8690cafb08753
