@@ -48,6 +48,8 @@ or simply: `npm install live-server -g`
 
 ## 3) Configuring Webpack
 
+- first create the webpack config file: `webpack.config.js`
+
 - webpack can bundle everything from js to sass, images. It bundles them all into one file for each (js, css, images). *For the full range of options, visit the Webpack website: https://webpack.js.org/*
 
 We'll be using webpack 5, which is the latest version. According to the <a href="https://webpack.js.org/concepts/">documentation</a>, there are six key concepts to understand in Webpack: 
