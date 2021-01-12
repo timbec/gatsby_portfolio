@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Open+Sans:wght@600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat&family=Open+Sans:wght@600&display=swap");
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 6rem;
+  color: $color-black; 
+
+  a {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #09012d;
+  }
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #09012d; /*don't know why I can't import variables*/
+  box-shadow: none; 
+}
