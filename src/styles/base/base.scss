@@ -1,27 +1,28 @@
-@import "../abstract/mixins.scss"; 
-@import "../abstract/variables.scss"; 
+@import "../abstract/mixins.scss";
+@import "../abstract/variables.scss";
 
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%; 
-    /*1 rem = 10px; 10px/16px = 62.5% */
+  font-size: 62.5%;
+  /*1 rem = 10px; 10px/16px = 62.5% */
 }
 
 body {
-    box-sizing: border-box;
-    font-size: 1.6rem; 
-    font-family: "Helvetica Neue", Helvetica, sans-serif; 
-    padding: 3rem;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  padding: 3rem;
 }
 
 ::selection {
+<<<<<<< HEAD
     background-color: $color-black;
     color: $color-white;
 }
@@ -30,3 +31,18 @@ body {
     max-width: 120rem; 
     margin: 0 auto; 
 }
+=======
+  background-color: $color-black;
+  color: $color-white;
+}
+
+.container {
+  display: grid;
+
+  @media only screen and (max-width: $bp-large) {
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+  }
+}
+>>>>>>> 47e78a6cbd6747f5d316beda3fa8690cafb08753
