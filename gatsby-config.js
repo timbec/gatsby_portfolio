@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Tim Beckett Web Portfolio`,
-    subtitle: `Full Stack Developer`,
+    title: `Tim Beckett`,
+    subtitle: `Developer Portfolio`,
     author: `Tim Beckett`,
     description: `Web Portfolio and blog built on the Starter Blog by Kyle Mathews`,
     siteUrl: `https://tim-beckett.com/`,

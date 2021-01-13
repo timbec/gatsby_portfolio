@@ -10,7 +10,7 @@ import "../styles/global.css"
 
 const Layout = ({ location, title, subtitle, children }) => {
   return (
-    <div>
+    <div className="container">
       <Header location={location} title={title} subtitle={subtitle} />
       <NavBar />
       <main className="main">{children}</main>
