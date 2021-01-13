@@ -10,21 +10,19 @@ const Header = ({ location, title, subtitle }) => {
   if (true) {
     header = (
       <div className="content-wrapper">
-        <h1 className="header-main__title>
-          <Link className="title-link" to={`/`}>{title}</Link>
+        <h1 className="header-main__title">
+          <Link className="header-main__title-link" to={`/`}>
+            {title}
+          </Link>
         </h1>
-        <h2 className="header-title__subtitle">
-          Developer Portfolio
-          </h2>
+        <h2 className="header-title">Developer Portfolio</h2>
       </div>
     )
   } else {
     header = (
       <div className="header-main__title_group">
         <h3>
-          <Link to={`/`} >
-            {title}
-          </Link>
+          <Link to={`/`}>{title}</Link>
         </h3>
         <h2>Developer Portfolio</h2>
       </div>
