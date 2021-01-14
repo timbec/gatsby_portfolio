@@ -10,14 +10,13 @@ h1 {
   font-size: 8rem;
   color: $color-black;
 
-    a {
-      // font-family: "Open Sans", sans-serif;
-      font-family: "Monterrat", sans-serif; 
-      font-size: 8rem; 
-      font-weight: 800;
-      text-transform: uppercase;
-      color: #09012d;
-    }
+  a {
+    font-family: "Monterrat", sans-serif;
+    font-size: 8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #09012d;
+  }
 }
 
 h2,
@@ -33,7 +32,7 @@ p {
 
 a {
   font-family: "Open Sans", sans-serif;
-  font-family: "Monterrat", sans-serif; 
+  font-family: "Monterrat", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
   color: #09012d; /*don't know why I can't import variables*/
