@@ -14,18 +14,18 @@ const IndexPage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Home Page" />
 
-      <section id="intro">
-          <article>
-            <h2>Welcome to the latest iteration of my portoflio website</h2>
+      <section id="intro" className="home__page">
+          <article className="home__page--article">
+            <h2 className="home__page--article__title">Welcome to the latest iteration of my portoflio website</h2>
 
             <p>My last portfolio was built on Django. Django was interesting but hard to configure properly to use Markdown. Since I was planning to build out the front end in some variation of React anyway, I decided to just rebuild it in Gatsby, then re-incorporate the Django backend later if it makes sense. </p>
           </article>
       </section>
-      <section id="portfolio">
-        <ul>
-          <li>Image One</li>
-          <li>Image Two</li>
-          <li>Image Three</li>
+      <section id="portfolio" className="home__page--portfolio"> 
+        <ul ome__page--portfolio_group>/ul>
+          <li className="ome__page--portfolio">Image One</li>
+          <li className="ome__page--portfolio">Image Two</li>
+          <li className="ome__page--portfolio">Image Three</li>
         </ul>
       </section>
       <Bio />

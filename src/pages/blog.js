@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+/**What does 'rhythm' do? */
 import { rhythm } from "../utils/typography"
 
 const Blog = ({ data, location }) => {
@@ -17,8 +18,8 @@ const Blog = ({ data, location }) => {
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article key={node.fields.slug}>
-            <header>
+          <article key={node.fields.slug} className="blog__article">
+            <header className="blog__article--header">
               <h3
                 style={{
                   marginBottom: rhythm(1 / 4),
