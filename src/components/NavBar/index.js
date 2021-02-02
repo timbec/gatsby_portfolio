@@ -11,8 +11,6 @@ import Hamburger from "./hamburger"
 
 import { rhythm } from "../../utils/typography"
 
-import "./nav.scss"
-
 const NavBar = () => {
 
     const closeNav = () =>  {

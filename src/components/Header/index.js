@@ -15,7 +15,8 @@ const Header = ({ location, title, subtitle }) => {
             {title}
           </Link>
         </h1>
-        <h2 className="header__main--subtitle">Developer Portfolio</h2>
+
+        <h3 className="header__main--subtitle">I am a software engineer. I build stuff. Sometimes it's even useful</h3>
       </div>
     )
   } else {
