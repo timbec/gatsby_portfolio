@@ -6,8 +6,8 @@ import "./footer.scss"
 
 const Footer = () => {
   return (
-    <footer>
-      <nav id="footer-nav" className="footer-nav">
+    <footer className="footer">
+      <nav id="footer-nav" className="footer--nav">
         <ul>
           <li>
             <Link to="/">Home</Link>
