@@ -15,17 +15,19 @@ const IndexPage = () => {
       </Helmet>
       <Container>
         <section id="intro">
-          <h3>Welcome to my portfolio</h3>
+            <article>
+              <h2>Welcome to the latest iteration of my portoflio website</h2>
+
+              <p>My last portfolio was built on Django. Django was interesting but hard to configure properly to use Markdown. Since I was planning to build out the front end in some variation of React anyway, I decided to just rebuild it in Gatsby, then re-incorporate the Django backend later if it makes sense. </p>
+            </article>
         </section>
         <section id="portfolio">
-          <h3>A selection of my portfolio items</h3>
           <ul>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
+            <li>Image One</li>
+            <li>Image Two</li>
+            <li>Image Three</li>
           </ul>
         </section>
-
       </Container>
     </Layout>
   );

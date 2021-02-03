@@ -5,20 +5,12 @@ import Container from 'components/Container';
 
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       <Container>
-        <h1>
+        <h1 className="header__title">
           Tim Beckett
         </h1>
-        <h2>Software Engineer</h2>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/page-2/">Page 2</Link>
-          </li>
-        </ul>
+        <h2 className="header__subtitle">Software Engineer</h2>
       </Container>
     </header>
   );

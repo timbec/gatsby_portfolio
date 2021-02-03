@@ -14,7 +14,7 @@ const Blog = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO />
-      
+      <section class="blog">
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -38,6 +38,7 @@ const Blog = ({ data, location }) => {
           </article>
         )
       })}
+      </section>
       <Bio />
     </Layout>
   )
