@@ -1,24 +1,37 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 
-import Header from "./Header"
-import NavBar from "./NavBar"
-import Sidebar from "./Sidebar";
-import Footer from "./Footer"
+import "assets/stylesheets/application.scss";
 
-// import { rhythm, scale } from "../utils/typography"
-// import "../styles/global.css"
+import Header from "components/Header";
+import Sidebar from "components/Sidebar";
+import Footer from "components/Footer";
 
-const Layout = ({ location, title, subtitle, children }) => {
+const Layout = ({ children, pageName }) => {
+  let className = "";
+
+  if (pageName) {
+    className = `${className} page-${pageName}`;
+  }
+
   return (
-    <div className="container">
-      <Sidebar></Sidebar>
-      <Header location={location} title={title} subtitle={subtitle} />
-      <NavBar />
-      <main className="main">{children}</main>
-      <Footer />
-    </div>
-  )
-}
+    <>
+      <Helmet bodyAttributes={{ class: className }}>
+        <title>Gatsby Site</title>
+      </Helmet>
+      <div className="wrapper">
+        <Sidebar />
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </div>
+    </>
+  );
+};
 
-export default Layout
+Layout.propTypes = {
+  children: PropTypes.node.isRequired
+};
+
+export default Layout;

@@ -1,0 +1,17 @@
+.page-home h1 {
+  color: black;
+}
+
+.page-home .gatsby-astronaut {
+  overflow: hidden;
+  width: 10em;
+  height: 10em;
+  background-color: rebeccapurple;
+  border-radius: 100%;
+  border: solid 6px rebeccapurple;
+  margin: 0 auto 1em;
+}
+
+.page-home .gatsby-astronaut img {
+  width: 100%;
+}

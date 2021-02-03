@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Open+Sans:wght@600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat&family=Open+Sans:wght@600&display=swap");
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 8rem;
+  color: $color-black;
+
+  a {
+    font-family: "Monterrat", sans-serif;
+    font-size: 8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $color-black;
+  }
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {color: $color-black;}
+
+p {
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Monterrat", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: $color-black; 
+  box-shadow: none;
+
+  &:hover {
+    color: $color-red;
+  }
+}
