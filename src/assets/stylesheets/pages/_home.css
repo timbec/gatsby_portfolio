@@ -1,8 +1,8 @@
 .page-home h1 {
-  color: black;
+  color: color-black;
 }
 
-.page-home .gatsby-astronaut {
+/* .page-home .gatsby-astronaut {
   overflow: hidden;
   width: 10em;
   height: 10em;
@@ -14,4 +14,8 @@
 
 .page-home .gatsby-astronaut img {
   width: 100%;
+} */
+
+#intro {
+  padding: 3rem 5rem; 
 }

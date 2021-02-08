@@ -1,5 +1,8 @@
 .container {
   width: 100%;
-  max-width: 50em;
+  grid-column: 2/4;
+  display: grid; 
+  grid-template-columns: column; 
+  max-width: 100em;
   margin: 0 auto;
 }
