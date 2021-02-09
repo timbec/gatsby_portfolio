@@ -35,7 +35,7 @@ body {
   // grid-template-rows: 80vh min-content auto repeat(3, min-content); 
   grid-template-rows: repeat(8, 1fr); 
   // grid-template-columns: minmax(min-content, 14rem); 
-  grid-template-columns: 1fr repeat(4, minmax(auto, 25em));
+  grid-template-columns: 1fr repeat(4, minmax(auto, 25em)) 1fr;
 
   // grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem);
   
