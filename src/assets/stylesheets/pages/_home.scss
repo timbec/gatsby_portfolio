@@ -28,24 +28,27 @@
   }
 }
 
-.portfolio__images {
+.portfolio{
   // might be better as grid
-  ul {
+  &__images {
     display: flex; 
     flex-wrap: wrap; 
-    justify-content: space-around; 
-  }
+    justify-content: space-between; 
+    list-style: none; 
+    padding: 1rem 3rem; 
 
 
-  &--image {
-    width:100%; 
-    max-width: 20rem; 
-    margin: 1rem; 
-    border: .1rem #333 solid; 
-
-    img {
-      width: 100%; 
-      height: auto; 
+    &--image {
+      width:100%; 
+      max-width: 20rem; 
+      margin: 1rem; 
+      border: .1rem #333 solid; 
+  
+      img {
+        width: 100%; 
+        height: auto; 
+      }
     }
   }
+
 }

@@ -8,7 +8,6 @@ const Sidebar = () => {
   return (
     <aside className="sidebar">
         <NavBar />
-        <h3>The Sidebar</h3>
     </aside>
   );
 };

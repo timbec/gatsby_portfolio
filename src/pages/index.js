@@ -22,8 +22,9 @@ const IndexPage = () => {
               <p>My last portfolio was built on Django. Django was interesting but hard to configure properly to use Markdown. Since I was planning to build out the front end in some variation of React anyway, I decided to just rebuild it in Gatsby, then re-incorporate the Django backend later if it makes sense. </p>
             </article>
         </section>
-        <section id="portfolio" className="portfolio__images">
-          <ul>
+        <section id="portfolio" className="portfolio">
+          <h2>Portfolio</h2>
+          <ul className="portfolio__images">
             <li className="portfolio__images--image">
             <Image src={`client-logos/image.png`}/> 
             </li>
