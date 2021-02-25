@@ -4,6 +4,7 @@ subtitle: Setting up Webpack and Babel
 date: "2020-02-06T22:40:32.169Z"
 description: This a two part post, describing how to set up and configure Webpack and Babel.
 slug: 'setting-up-webpack'
+featuredImage: salty_egg.jpg
 ---
 
   I've long struggled to understand and correctly configure webpack. I didn't even understand what Babel was meant to do never mind how to configure it and set it up. One the many things I've been grateful to Jonas Schmedtmann's <a href="https://www.udemy.com/course/the-complete-javascript-course/">Complete Javascript Course</a>, has been Jonas' lucid and thorough explanation of setting up webpack and babel. Though this doesn't get around the constant pitfalls of errors and updates that can make modern tooling so frustrating, I now at least understand how to set up webpack from scratch. 

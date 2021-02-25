@@ -12,7 +12,7 @@ import SEO from "../components/seo"
 const Blog = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
-  // const featuredImgFluid = data.allMarkdownRemark.edges.data.frontmatter.featuredImage.childImageSharp.fluid
+  //const featuredImgFluid = data.allMarkdownRemark.edges
 
 
   return (
@@ -20,17 +20,18 @@ const Blog = ({ data, location }) => {
       <SEO />
       <section className="blog">
         <section className="blog__list">
+          {console.log(posts)}
         {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
+        let featuredImage = node.frontmatter.featuredImage.childImageSharp.fluid || ''
+
         return (
           <article key={node.fields.slug} className="blog__article">
 
             <header className="blog__article--header">
-            {/* <Img fluid={featuredImgFluid} /> */}
-
-              <h3
->
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+            <Img fluid={featuredImage} />
+            <h3>
+                <Link>
                   {title}
                 </Link>
               </h3>
