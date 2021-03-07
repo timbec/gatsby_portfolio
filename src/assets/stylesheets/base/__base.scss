@@ -1,38 +1,6 @@
 @import "typography";
 @import "animations";
 
-<<<<<<< HEAD
-body {
-  font-family: Helvetica, Arial, sans-serif;
-  padding: 0;
-  margin: 0;
-}
-
-.wrapper {
-  min-height: 100vh;
-  display: grid;
-  // grid-template-rows: auto 1fr auto;
-  // grid-template-rows: 80vh min-content auto repeat(3, min-content); 
-  grid-template-rows: repeat(12, 1fr); 
-  grid-template-columns: minmax(min-content, 14rem); 
-
-  // grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem);
-  
-}
-
-main {
-  grid-column: 2/10; 
-  grid-row: 3/10; 
-  display: flex;
-  text-align: center;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  padding: 2em 0;
-}
-=======
->>>>>>> b8375f8fd38597abffd7c4949ee30cc279b1a544
-
 *,
 *::before,
 *::after {
@@ -63,22 +31,21 @@ body {
   min-height: 100vh;
   display: grid;
   // grid-template-rows: auto 1fr auto;
-  // grid-template-rows: 80vh min-content auto repeat(3, min-content); 
-  grid-template-rows: repeat(12, 1fr); 
-  // grid-template-columns: minmax(min-content, 14rem); 
+  // grid-template-rows: 80vh min-content auto repeat(3, min-content);
+  grid-template-rows: repeat(12, 1fr);
+  // grid-template-columns: minmax(min-content, 14rem);
   grid-template-columns: 1fr repeat(5, minmax(auto, 20em)) 1fr;
 
   // grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem);
-  
 }
 
 main {
-  grid-column: 2/8; 
-  grid-row: 3/10; 
-  display: flex; 
+  grid-column: 2/8;
+  grid-row: 3/10;
+  display: flex;
   text-align: center;
   align-content: center;
   justify-content: center;
   padding: 2em 0;
-  margin: 3rem 0;   
+  margin: 3rem 0;
 }
