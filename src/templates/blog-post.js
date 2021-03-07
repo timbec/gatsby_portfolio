@@ -8,7 +8,8 @@ import SEO from "../components/seo"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
+  console.log(post);
+  const siteTitle = data.site.siteMetadata.title || `Title`
   const { previous, next } = pageContext
 
   return (
@@ -58,21 +59,41 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        description
-      }
+query BlogPostBySlug(
+  $id: String!
+  $previousPostId: String
+  $nextPostId: String
+) {
+  site {
+    siteMetadata {
+      title
     }
   }
+  markdownRemark(id: { eq: $id }) {
+    id
+    excerpt(pruneLength: 160)
+    html
+    frontmatter {
+      title
+      date(formatString: "MMMM DD, YYYY")
+      description
+    }
+  }
+  previous: markdownRemark(id: { eq: $previousPostId }) {
+    fields {
+      slug
+    }
+    frontmatter {
+      title
+    }
+  }
+  next: markdownRemark(id: { eq: $nextPostId }) {
+    fields {
+      slug
+    }
+    frontmatter {
+      title
+    }
+  }
+}
 `

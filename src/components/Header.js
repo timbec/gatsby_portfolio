@@ -6,12 +6,12 @@ import Container from 'components/Container';
 const Header = () => {
   return (
     <header className="header">
-      <Container>
+      <div className="titleContainer">
         <h1 className="header__title">
           Tim Beckett
         </h1>
         <h2 className="header__subtitle">Software Engineer/ Developer</h2>
-      </Container>
+      </div>
     </header>
   );
 };

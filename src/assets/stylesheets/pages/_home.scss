@@ -28,8 +28,61 @@
   }
 }
 
+.intro {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+
+  &__text {
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 4rem;
+    margin-top: 2rem;
+    grid-row: 1/3;
+    grid-column: 7/12;
+    align-self: flex-start;
+
+    @include respond(tab-port) {
+      grid-row: 1/3;
+      grid-column: 1/13; 
+      padding-right: 5rem; 
+      padding-left: 5rem; 
+      margin-bottom: 4rem; 
+    }
+
+    h2 {
+      font-size: 4rem; 
+      margin-bottom: 3rem; 
+    }
+
+    p {
+      font-size: 1.8rem; 
+      text-align: justify; 
+      margin-bottom: 1.2rem; 
+    }
+  }
+
+  &__collage {
+    display: grid;
+    grid-row: 1/3;
+    grid-column: 2/7;
+
+    @include respond(tab-port) {
+      grid-row: 4/6;
+      grid-column: 1/13; 
+    }
+  }
+}
+
 .portfolio{
   // might be better as grid
+  margin-top: 5rem; 
+
+  &__heading {
+    font-size: 6rem; 
+    text-transform: uppercase; 
+  }
+
   &__images {
     display: flex; 
     flex-wrap: wrap; 
@@ -43,6 +96,10 @@
       max-width: 20rem; 
       margin: 1rem; 
       border: .1rem #333 solid; 
+
+      @include respond(tab-port) {
+        max-width: 40rem; 
+      }
   
       img {
         width: 100%; 

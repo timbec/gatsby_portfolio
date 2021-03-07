@@ -31,7 +31,7 @@ const Blog = ({ data, location }) => {
             <header className="blog__article--header">
             <Img fluid={featuredImage} />
             <h3>
-                <Link>
+                <Link to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
@@ -42,7 +42,19 @@ const Blog = ({ data, location }) => {
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}
+                
               />
+            </section>
+            <section className="meta">
+              <ul className="meta__categories">
+                <h3>Categories</h3>
+                <li>{node.frontmatter.category}</li>
+              </ul>
+              <ul className="meta__tags">
+                <h3>Tags:</h3>
+                <li>{node.frontmatter.tags}</li>
+              </ul>
+
             </section>
           </article>
         )

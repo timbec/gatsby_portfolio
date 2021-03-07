@@ -3,7 +3,8 @@ title: First AI? The Draughtsman Writer
 date: "2020-02-05T22:12:03.284Z"
 description: "Example of what was possibly one of the world's first AI: The Draughtsman Writer"
 featuredImage: draughtsman_writer.jpg
-slug: "first-ai-draughtsman-writer"
+slug: "blog/first-ai-draughtsman-writer"
+tags: ["draughtsman writer", "AI", "clockmakers"]
 ---
 
 ![The Draughtsman Writer](./draughtsman_writer.jpg)

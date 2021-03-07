@@ -1,11 +1,18 @@
 .header {
   width: 100%;
   color: white;
-  grid-column:2/9;
-  grid-row: 1/3;
+  grid-column:2/12;
+  grid-row: 1/2;
   min-height: 20rem;  
   background-color: $color-white;
-  border-bottom: 1rem solid $color-black; 
+  border-bottom: 1rem solid $color-red; 
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  @include respond(tab-port) {
+    grid-row: auto; 
+  }
 
   // &__title {
   //   margin: 2rem 0; 
@@ -14,14 +21,26 @@
   // &__subtitle{
   //   font-size: 5rem; 
   // }
+  .titleContainer {
+    grid-column: 2/6; 
+    grid-row: 1/4; 
+  }
 
   h1 {
-    margin: 4rem 0; 
+    margin: 0rem 0 0 0; 
+    text-transform: uppercase; 
+    line-height: 1.1;
+    text-align: center; 
   }
 
   h2 {
     margin-top: 0rem; 
     font-size: 4rem; 
+    text-align: center; 
+
+    @include respond(tab-port) {
+      font-size: 3rem; 
+    }
   }
 
   .container {

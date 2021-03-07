@@ -1,0 +1,15 @@
+
+
+// gatsby images
+.gatsby-image-wrapper {
+    max-width: 30rem; 
+    width: 100%; 
+    height: auto; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+
+    @include respond(tab-port) {
+        max-width: 100%; 
+    }
+}

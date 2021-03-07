@@ -66,6 +66,10 @@
     right: 75%; 
     background: $color-blue; 
     transform: translateX(0%);
+
+    @include respond(tab-port) {
+        right: 0; 
+    }
 }
 
 .nav-open .nav-toggle {

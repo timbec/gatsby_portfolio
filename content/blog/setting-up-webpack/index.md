@@ -3,7 +3,7 @@ title: Setting Up Webpack
 subtitle: Setting up Webpack and Babel
 date: "2020-02-06T22:40:32.169Z"
 description: This a two part post, describing how to set up and configure Webpack and Babel.
-slug: 'setting-up-webpack'
+slug: 'blog/setting-up-webpack'
 featuredImage: salty_egg.jpg
 ---
 
