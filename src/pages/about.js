@@ -7,7 +7,7 @@ const AboutPage = () => {
 
     return (
         <Layout>
-        <section>
+        <section id="about" className="page">
         <article>
           <h1>About Me</h1>
 

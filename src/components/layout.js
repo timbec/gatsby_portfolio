@@ -21,9 +21,9 @@ const Layout = ({ children, pageName }) => {
         <title>Gatsby Site</title>
       </Helmet>
       <div className="wrapper">
-        <Sidebar />
         <Header />
         <main>{children}</main>
+        <Sidebar />
         <Footer />
       </div>
     </>

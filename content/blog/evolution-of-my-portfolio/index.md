@@ -2,6 +2,7 @@
 title: Evolution of My Portfolio
 date: "2020-02-06T22:12:03.284Z"
 description: "Evolution of my portfolio, and why I made the decisions I did"
+featuredImage: salty_egg.jpg
 slug: "evolution-of-my-portfolio"
 ---
 
