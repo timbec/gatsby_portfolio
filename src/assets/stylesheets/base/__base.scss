@@ -12,7 +12,7 @@ body {
   display: grid;
   // grid-template-rows: auto 1fr auto;
   // grid-template-rows: 80vh min-content auto repeat(3, min-content); 
-  grid-template-rows: repeat(8, 1fr); 
+  grid-template-rows: repeat(12, 1fr); 
   grid-template-columns: minmax(min-content, 14rem); 
 
   // grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem);
@@ -20,8 +20,8 @@ body {
 }
 
 main {
-  grid-column: 2/8; 
-  grid-row: 3/7; 
+  grid-column: 2/10; 
+  grid-row: 3/10; 
   display: flex;
   text-align: center;
   flex-direction: row;
