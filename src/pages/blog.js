@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -14,41 +13,38 @@ const Blog = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
   //const featuredImgFluid = data.allMarkdownRemark.edges
 
-
   return (
     <Layout location={location} title={siteTitle}>
       <SEO />
       <section className="blog">
         <section className="blog__list">
           {console.log(posts)}
-        {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        let featuredImage = node.frontmatter.featuredImage.childImageSharp.fluid || ''
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            let featuredImage =
+              node.frontmatter.featuredImage.childImageSharp.fluid || ""
 
-        return (
-          <article key={node.fields.slug} className="blog__article">
-
-            <header className="blog__article--header">
-            <Img fluid={featuredImage} />
-            <h3>
-                <Link>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-          </article>
-        )
-      })}
+            return (
+              <article key={node.fields.slug} className="blog__article">
+                <header className="blog__article--header">
+                  <Img fluid={featuredImage} />
+                  <h3>
+                    <Link to={node.fields.slug}>{title}</Link>
+                  </h3>
+                  <small>{node.frontmatter.date}</small>
+                </header>
+                <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
+                    }}
+                  />
+                </section>
+              </article>
+            )
+          })}
         </section>
-      <Bio />
+        <Bio />
       </section>
     </Layout>
   )
