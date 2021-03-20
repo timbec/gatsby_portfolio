@@ -1,19 +1,17 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from "react"
+import { Link } from "gatsby"
 
-import Container from 'components/Container';
+import Container from "components/Container"
 
 const Header = () => {
   return (
     <header className="header">
-      <Container>
-        <h1 className="header__title">
-          Tim Beckett
-        </h1>
+      <div className="titleContainer">
+        <h1 className="header__title">Tim Beckett</h1>
         <h2 className="header__subtitle">Software Engineer/ Developer</h2>
-      </Container>
+      </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

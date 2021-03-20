@@ -32,20 +32,24 @@ body {
   display: grid;
   // grid-template-rows: auto 1fr auto;
   // grid-template-rows: 80vh min-content auto repeat(3, min-content);
-  grid-template-rows: repeat(12, 1fr);
+  grid-template-rows: repeat(12, min-content);
   // grid-template-columns: minmax(min-content, 14rem);
-  grid-template-columns: 1fr repeat(5, minmax(auto, 20em)) 1fr;
+  grid-template-columns: 1fr repeat(10, minmax(auto, 20em)) 1fr;
 
   // grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem);
 }
 
 main {
-  grid-column: 2/8;
-  grid-row: 3/10;
+  grid-column: 2/13;
+  grid-row: 2/10;
   display: flex;
   text-align: center;
   align-content: center;
   justify-content: center;
   padding: 2em 0;
   margin: 3rem 0;
+
+  @include respond(tab-port) {
+    grid-row: 2/12;
+  }
 }

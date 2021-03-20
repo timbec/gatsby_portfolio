@@ -15,6 +15,7 @@ module.exports = {
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -45,7 +46,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 630,
             },
           },
           {

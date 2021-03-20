@@ -6,6 +6,8 @@ featuredImage: draughtsman_writer.jpg
 slug: "blog/evolution-of-my-portfolio"
 ---
 
+![The Draughtsman Writer](./draughtsman_writer.jpg)
+
 - Started in Wordpress
 - Rebuilt in Laravel
 - Rebuilt in Django after I decided to shift focus from PHP to Python. Idea was to build the most obvious in new technology as a means to get experience in that technology.
