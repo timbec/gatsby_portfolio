@@ -5,10 +5,10 @@ import Container from "components/Container"
 
 const Header = () => {
   return (
-    <header className="header">
+    <header className="site-header">
       <div className="titleContainer">
-        <h1 className="header__title">Tim Beckett</h1>
-        <h2 className="header__subtitle">Software Engineer/ Developer</h2>
+        <h1 className="site-header__title">Tim Beckett</h1>
+        <h2 className="site-header__subtitle">Software Engineer/ Developer</h2>
       </div>
     </header>
   )

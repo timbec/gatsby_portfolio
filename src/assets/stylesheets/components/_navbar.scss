@@ -66,6 +66,15 @@
   right: 75%;
   background: $color-blue;
   transform: translateX(0%);
+
+  @include respond(tab-port) {
+    right: 50%; 
+  }
+
+  @include respond(phone) {
+    right: 0; 
+    opacity: 0.9;
+  }
 }
 
 .nav-open .nav-toggle {

@@ -1,4 +1,4 @@
-.header {
+.site-header {
   width: 100%;
   color: white;
   grid-column: 1/12;
@@ -9,7 +9,7 @@
   display: grid;
 
   @include respond(tab-port) {
-    grid-row: auto;
+    grid-column: 2/12;
   }
 
   // &__title {

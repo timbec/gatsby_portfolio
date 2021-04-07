@@ -7,5 +7,18 @@
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 5rem;
+
+    @include respond(phone) {
+      flex-direction: column; 
+    }
+  }
+
+  &__article {
+
+
+    @include respond(phone) {
+      width: 96%; 
+      margin: 5% 2%; 
+    }
   }
 }

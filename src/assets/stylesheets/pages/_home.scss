@@ -52,7 +52,9 @@
 
     h2 {
       font-size: 4rem;
+      margin: 2rem 4rem; 
       margin-bottom: 3rem;
+      border-bottom: .3rem solid $color-red; 
     }
 
     p {
@@ -81,6 +83,8 @@
   &__heading {
     font-size: 6rem;
     text-transform: uppercase;
+    margin: 2rem 4rem; 
+    border-bottom: .3rem solid $color-red; 
   }
 
   &__images {
@@ -93,11 +97,17 @@
     &--image {
       width: 100%;
       max-width: 20rem;
+      padding: 0; 
       margin: 1rem;
       border: 0.1rem #333 solid;
 
       @include respond(tab-port) {
-        max-width: 40rem;
+        max-width: 20rem;
+        border: 0.01rem #ccc solid;
+      }
+
+      @include respond(mobile) {
+        border: 0.01rem #fff solid;
       }
 
       img {
