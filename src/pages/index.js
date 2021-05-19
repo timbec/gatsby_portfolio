@@ -17,7 +17,7 @@ const IndexPage = () => {
       <Container>
         <section id="intro" className="intro">
           <article className="intro__text">
-            <h2>Welcome to my portoflio website</h2>
+            <h2>Welcome</h2>
 
             <p>
               I am a Full-Stack Developer specializing in Javascript, PHP and

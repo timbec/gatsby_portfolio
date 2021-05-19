@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  console.log(post)
+
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
@@ -18,14 +18,18 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article>
-        <header>
-          <h1>{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+      <article className="single__post">
+        <header className="single__post--header">
+          <h1 className="single__post--header__title">{post.frontmatter.title}</h1>
+          <p className="single__post--header__date">
+            {post.frontmatter.date}
+          </p>
         </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <section className="single__post--content"
+          dangerouslySetInnerHTML={{ __html: post.html }} 
+        />
         <hr />
-        <footer>
+        <footer className="single__post--footer">
           <Bio />
         </footer>
       </article>

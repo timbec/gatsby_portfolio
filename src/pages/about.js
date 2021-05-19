@@ -1,17 +1,21 @@
 import React from 'react'; 
 import { Link, graphql } from "gatsby"; 
 
-import Layout from "../components/layout";
+import { Helmet } from "react-helmet"
+
+import Layout from "components/Layout"
+import Container from "components/Container"
+import Image from "components/image"
 
 const AboutPage = () => {
 
     return (
         <Layout>
         <section id="about" className="page">
-        <article>
-          <h1>About Me</h1>
+        <article className="article">
+          <h2 className="article--heading">About Me</h2>
 
-          <div className="entry-content">
+          <div className="article--body">
             <p>
               I am a full-stack developer though I tilt more toward the
               front-end. I'm proficient in Javascript, Python, and (if need be)
@@ -27,6 +31,9 @@ const AboutPage = () => {
             </p>
           </div>
         </article>
+        <figure className="article--image">
+            <Image src=""></Image>
+        </figure>
       </section>
       </Layout>
     )
