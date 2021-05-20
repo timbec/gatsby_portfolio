@@ -16,6 +16,7 @@ const AboutPage = () => {
           <h2 className="article--heading">About Me</h2>
 
           <div className="article--body">
+          <Image src={`about/self-portrait.jpg`} />
             <p>
               I am a full-stack developer though I tilt more toward the
               front-end. I'm proficient in Javascript, Python, and (if need be)

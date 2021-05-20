@@ -60,6 +60,10 @@
       grid-row: 1/2;
       grid-column: 2/7;
 
+      @include respond(phone) {
+        display: none; 
+      }
+
       @include respond(tab-port) {
         grid-row: 4/6;
         grid-column: 1/13;
@@ -69,12 +73,20 @@
           grid-template-rows: repeat(8, 1fr);
           grid-template-columns: repeat(12, 1fr);
           display: grid;
+
+          @include respond(phone) {
+            display: block; 
+          }
         } 
 
         &--photo {
           list-style: none; 
           // margin: 2rem 1rem; 
           // border: .0003rem solid $color-black; 
+
+          @include respond(phone) {
+            margin-bottom: 3rem; 
+          }
         }
     
         &--photo:nth-child(1) {
@@ -110,6 +122,10 @@
     text-transform: uppercase;
     margin: 2rem 4rem; 
     border-bottom: .3rem solid $color-black; 
+
+    @include respond(mobile) {
+      margin-bottom: 7rem; 
+    }
   }
 
   &__images {
@@ -127,7 +143,7 @@
       border: 0.1rem #333 solid;
 
       @include respond(tab-port) {
-        max-width: 20rem;
+        max-width: 90%;
         border: 0.01rem #ccc solid;
       }
 

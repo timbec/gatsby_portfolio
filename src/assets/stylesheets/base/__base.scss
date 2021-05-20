@@ -37,6 +37,10 @@ body {
   grid-template-columns: 1fr repeat(10, minmax(auto, 20em)) 1fr;
 
   // grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem);
+
+   @include respond(phone) {
+     display: block; 
+   }
 }
 
 main {

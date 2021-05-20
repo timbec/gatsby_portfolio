@@ -13,7 +13,7 @@ const Header = () => {
         </Link>
       </h1>
         
-        <h2 className="site-header__subtitle">Software Engineer</h2>
+        <h2 className="site-header__subtitle">Software Developer</h2>
       </div>
     </header>
   )
