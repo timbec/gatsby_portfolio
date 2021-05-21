@@ -8,6 +8,11 @@ footer {
   text-align: center;
   background-color: $color-black;
 
+  // For now, until footer has more content
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+
   @include respond(tab-port) {
     grid-row: 10/13;
   }
