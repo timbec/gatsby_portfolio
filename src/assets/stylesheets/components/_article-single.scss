@@ -1,54 +1,68 @@
 .single__post {
+  &--header {
+    padding-bottom: 3rem;
 
-    &--header {
-        padding-bottom: 3rem;
+    &__title {
+      font-size: 6rem;
+      color: $color-black;
+    }
+  }
 
-        &__title {
-            font-size: 6rem; 
-            color: $color-black; 
-        }
+  &--content {
+    text-align: left;
+    max-width: 75rem;
+    padding: 0 2rem;
+    margin: 5rem auto;
+
+    p {
+      font-size: 1.8rem;
+      color: $color-black;
+      margin-bottom: 1.8rem;
     }
 
-    &--content {
-        text-align: left; 
-        padding: 0 2rem; 
-        margin-top: 5rem; 
-
-        p {
-            font-size: 1.8rem; 
-            color: $color-black; 
-            margin-bottom: 1.8rem; 
-        }
-
-        h2 {
-            font-size: 2.2rem; 
-        }
-
-        ol {
-            margin: 2rem 0; 
-
-            li {
-                font-size: 1.8rem; 
-            }
-        }
-
-        pre {
-            font-size: 2.2rem; 
-            background: $color-black; 
-            color: white; 
-            text-align: left; 
-            padding: 2rem;
-
-            code {
-                background: transparent; 
-            }
-        }
-
-        code {
-            font-size: 2.2rem; 
-            background: #ccc; 
-            color: white; 
-            text-align: left; 
-        }
+    h2 {
+      font-size: 2.2rem;
     }
+
+    ol {
+      margin: 2rem 0;
+
+      li {
+        font-size: 1.8rem;
+      }
+    }
+
+    ul {
+      margin: 2rem 0;
+      li {
+        font-size: 1.8rem;
+      }
+    }
+
+    pre {
+      background: $color-black;
+      text-align: left;
+      padding: 2rem;
+      margin: 1.6rem 0;
+
+      code {
+        background: $color-black;
+        color: white;
+        font-size: 1.5rem;
+      }
+    }
+
+    code {
+      font-size: 1.6rem;
+      background: transparent;
+      color: black;
+      text-align: left;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  //   misc
+  .gatsby-resp-image-wrapper {
+    margin-bottom: 5rem;
+  }
 }

@@ -1,56 +1,67 @@
 .blog {
   display: flex;
   flex-direction: column;
+  padding: 2rem 3rem;
 
   &__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+    align-items: start;
     margin-bottom: 5rem;
 
     @include respond(phone) {
-      flex-direction: column; 
+      flex-direction: column;
     }
   }
 
   &__article {
-
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 5rem;
+    margin-bottom: 5rem;
+    border-bottom: 1px dotted #ccc;
 
     &--header {
-
       .gatsby-image-wrapper {
-        border: 0.03rem solid $color-black; 
+        border: 0.03rem solid $color-black;
       }
 
       &__title {
-        
         a {
-          text-decoration: none; 
-          font-size: 3rem; 
-          color: $color-black; 
+          text-decoration: none;
+          font-size: 3rem;
+          color: $color-black;
         }
       }
 
       &__date {
-        font-size: 1.6rem; 
+        font-size: 1.6rem;
+        width: 6em;
+        height: auto;
+        grid-row: 1 / span 2;
+        transform: translateX(-5rem);
+        transform: translateY(5rem) translateX(-4rem);
+        background: white;
+        color: $color-black;
+        padding: 1rem;
+        border: 1px solid #ccc;
       }
-
-
     }
 
     &--body {
-      margin-top: 3rem; 
+      margin-top: 3rem;
 
       &__excerpt {
-        font-size: 2.2rem; 
-        color: $color-black; 
+        font-size: 2.2rem;
+        color: $color-black;
       }
     }
 
-
     @include respond(phone) {
-      width: 96%; 
-      margin: 5% 2%; 
+      width: 96%;
+      margin: 5% 2%;
     }
   }
 }

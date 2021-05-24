@@ -18,17 +18,17 @@ const Blog = ({ data, location }) => {
       <SEO />
       <section className="blog">
         <section className="blog__list">
-    
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
+
             let featuredImage =
               node.frontmatter.featuredImage.childImageSharp.fluid || ""
 
             return (
               <article key={node.fields.slug} className="blog__article">
                 <header className="blog__article--header">
-                <Link to={node.fields.slug}>>
-                  <Img fluid={featuredImage} />
+                  <Link to={node.fields.slug}>
+                    <Img fluid={featuredImage} />
                   </Link>
                   <h3 className="blog__article--header__title">
                     <Link to={node.fields.slug}>{title}</Link>
@@ -38,7 +38,8 @@ const Blog = ({ data, location }) => {
                   </small>
                 </header>
                 <section className="blog__article--body">
-                  <p className="blog__article--body__excerpt"
+                  <p
+                    className="blog__article--body__excerpt"
                     dangerouslySetInnerHTML={{
                       __html: node.frontmatter.description || node.excerpt,
                     }}

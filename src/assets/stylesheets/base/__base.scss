@@ -52,4 +52,8 @@ main {
   @include respond(tab-port) {
     grid-row: 2/12;
   }
+
+  .container {
+    max-width: 120rem;
+  }
 }
