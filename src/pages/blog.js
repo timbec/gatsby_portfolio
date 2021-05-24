@@ -18,7 +18,7 @@ const Blog = ({ data, location }) => {
       <SEO />
       <section className="blog">
         <section className="blog__list">
-          {console.log(posts)}
+    
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             let featuredImage =
@@ -27,14 +27,18 @@ const Blog = ({ data, location }) => {
             return (
               <article key={node.fields.slug} className="blog__article">
                 <header className="blog__article--header">
+                <Link to={node.fields.slug}>>
                   <Img fluid={featuredImage} />
-                  <h3>
+                  </Link>
+                  <h3 className="blog__article--header__title">
                     <Link to={node.fields.slug}>{title}</Link>
                   </h3>
-                  <small>{node.frontmatter.date}</small>
+                  <small className="blog_article--header__date">
+                    {node.frontmatter.date}
+                  </small>
                 </header>
-                <section>
-                  <p
+                <section className="blog__article--body">
+                  <p className="blog__article--body__excerpt"
                     dangerouslySetInnerHTML={{
                       __html: node.frontmatter.description || node.excerpt,
                     }}

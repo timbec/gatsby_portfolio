@@ -17,7 +17,7 @@ const IndexPage = () => {
       <Container>
         <section id="intro" className="intro">
           <article className="intro__text">
-            <h2>Welcome to my portoflio website</h2>
+            <h2>Welcome</h2>
 
             <p>
               I am a Full-Stack Developer specializing in Javascript, PHP and
@@ -60,34 +60,38 @@ const IndexPage = () => {
         <section id="portfolio" className="portfolio">
           <h2 className="portfolio__heading">Portfolio</h2>
           <ul className="portfolio__images">
-            <li className="portfolio__images--image">
+            <li className="portfolio__images--image large-logo">
               <Image src={`client-logos/epix.png`} />
             </li>
-            <li className="portfolio__images--image">
-              <Image src={`client-logos/millenium-full.jpg`} />
-            </li>
-            <li className="portfolio__images--image">
-              <Image src={`client-logos/sullivan.jpg`} />
-            </li>
-            <li className="portfolio__images--image">
+            <li className="portfolio__images--image large-logo">
               <Image src={`client-logos/nytimes_logo.jpg`} />
             </li>
-            <li className="portfolio__images--image">
-              <Image src={`client-logos/opera-rect.png`} />
+            <li className="portfolio__images--image large-logo">
+              <Image src={`client-logos/millenium-full.jpg`} />
             </li>
-            <li className="portfolio__images--image">
-              <Image src={`client-logos/lazard_asset_management_logo.jpg`} />
+            <li className="portfolio__images--image square-logo">
+              <Image src={`client-logos/sullivan.jpg`} />
             </li>
-            <li className="portfolio__images--image">
-              <Image src={`client-logos/weil.png`} />
-            </li>
-            <li className="portfolio__images--image">
-              <Image src={`client-logos/wsj.jpg`} />
-            </li>
-            <li className="portfolio__images--image">
+            
+            <li className="portfolio__images--image small-logo">
               <Image src={`client-logos/greatimmigrants.jpg`} />
             </li>
-            <li className="portfolio__images--image">
+            <li className="portfolio__images--image square-logo">
+              <Image src={`client-logos/opera-rect.png`} />
+            </li>
+            <li className="portfolio__images--image large-logo">
+              <Image src={`client-logos/lazard_asset_management_logo.jpg`} />
+            </li>
+            <li className="portfolio__images--image small-logo">
+              <Image src={`client-logos/weil.png`} />
+            </li>
+            <li className="portfolio__images--image small-logo">
+              <Image src={`client-logos/wsj.jpg`} />
+            </li>
+            <li className="portfolio__images--image small-logo">
+              <Image src={`client-logos/greatimmigrants.jpg`} />
+            </li>
+            <li className="portfolio__images--image small-logo">
               <Image src={`client-logos/Digitas_Health_Logo.jpg`} />
             </li>
           </ul>

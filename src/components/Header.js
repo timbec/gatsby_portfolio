@@ -7,8 +7,13 @@ const Header = () => {
   return (
     <header className="site-header">
       <div className="titleContainer">
-        <h1 className="site-header__title">Tim Beckett</h1>
-        <h2 className="site-header__subtitle">Software Engineer/ Developer</h2>
+      <h1 className="site-header__title">
+        <Link to="/">
+           Tim Beckett
+        </Link>
+      </h1>
+        
+        <h2 className="site-header__subtitle">Software Developer</h2>
       </div>
     </header>
   )

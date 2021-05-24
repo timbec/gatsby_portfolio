@@ -2,14 +2,19 @@ footer {
   grid-column: 2/12;
   grid-row: 11/13;
   width: 100%;
-  height: auto;
+  min-height: 10rem; 
   line-height: 2em;
   color: white;
   text-align: center;
   background-color: $color-black;
 
+  // For now, until footer has more content
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+
   @include respond(tab-port) {
-    grid-row: 12/13;
+    grid-row: 10/13;
   }
 
   p {
