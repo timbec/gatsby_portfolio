@@ -33,7 +33,7 @@ const Blog = ({ data, location }) => {
                   <h3 className="blog__article--header__title">
                     <Link to={node.fields.slug}>{title}</Link>
                   </h3>
-                  <small className="blog_article--header__date">
+                  <small className="blog__article--header__date">
                     {node.frontmatter.date}
                   </small>
                 </header>

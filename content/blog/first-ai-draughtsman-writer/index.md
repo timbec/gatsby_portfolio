@@ -1,14 +1,12 @@
 ---
-title: First AI? The Draughtsman Writer
+title: The Draughtsman Writer
 date: "2020-02-05T22:12:03.284Z"
 description: "Example of what was possibly one of the world's first AI: The Draughtsman Writer"
 featuredImage: placeholder.jpg
 slug: "blog/first-ai-draughtsman-writer"
 ---
 
-![The Draughtsman Writer](./draughtsman_writer.jpg)
-
-<!-- <img align="center" width="100%" height="auto" src="draughtsman_writer.jpg"> -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7ZiH7oF3OMM" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I recently saw **The Draughtsman Writer** at a larger exhibit (name?) at the Met, **Technology In the Age of the Court**. Most of the exhibits were clever, if sometimes dazzling: many immensely complicated clockworks, constructed with gold and other precious minerals, but nothing truly blew me away until the exhibits at the show's end, and in particular 'The Draughtsman Writer'.
 
@@ -28,7 +26,7 @@ The Draughtsman can compose four different pictures, including drawings of a Chi
 
 The moving automaton was confined to a video next to the exhibit (as it was with all the other exhibits, presumably too old, too delicate for the repeat performances the exhibit would demand). Instead, in the actual exhibit, the Draughtsman peers straight ahead, eyes wide open, pen poised in its hand, waiting for the human intervention to fulfill its function and begin drawing and writing again.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7ZiH7oF3OMM" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+![The Draughtsman Writer](./draughtsman_writer.jpg)
 
 I was struck, watching the video again, by the beauty of the calligraphy, the detail in each drawing. What a watchmaker Maillard must have been, to so precisely record each groove in his brass discs, long before the plastic record album would perform the same function. What might have Maillard done with a computer, with modern computer languages?
 

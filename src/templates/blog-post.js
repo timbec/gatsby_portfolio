@@ -20,15 +20,20 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       />
       <article className="single__post">
         <header className="single__post--header">
-          <h1 className="single__post--header__title">{post.frontmatter.title}</h1>
-          <p className="single__post--header__date">
-            {post.frontmatter.date}
-          </p>
+          <h1 className="single__post--header__title">
+            {post.frontmatter.title}
+          </h1>
+          <p className="single__post--header__date">{post.frontmatter.date}</p>
         </header>
-        <section className="single__post--content"
-          dangerouslySetInnerHTML={{ __html: post.html }} 
+        <section
+          className="single__post--content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <hr />
+        <aside>
+          <h3>The Sidebar</h3>
+          <Link to="/blog">Back to Blog</Link>
+        </aside>
         <footer className="single__post--footer">
           <Bio />
         </footer>
