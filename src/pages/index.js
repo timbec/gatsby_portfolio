@@ -61,7 +61,7 @@ const IndexPage = () => {
           <h2 className="portfolio__heading">Portfolio</h2>
           <ul className="portfolio__images">
             <li className="portfolio__images--image one">
-              <Image src={`client-logos/epix.png`} />
+              <Image src={`client-logos/new-epix-logo.png`} />
             </li>
             <li className="portfolio__images--image large-logo two">
               <Image src={`client-logos/nytimes_logo.jpg`} />
@@ -89,7 +89,7 @@ const IndexPage = () => {
               <Image src={`client-logos/wsj.jpg`} />
             </li>
             <li className="portfolio__images--image small-logo ten">
-              <Image src={`client-logos/nyu_law.png`} />
+              <Image src={`client-logos/nyu-law.png`} />
             </li>
             <li className="portfolio__images--image small-logo eleven">
               <Image src={`client-logos/Digitas_Health_Logo.jpg`} />

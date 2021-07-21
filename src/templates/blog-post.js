@@ -18,6 +18,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <Link to="/blog">Back to Blog</Link>
       <article className="single__post">
         <header className="single__post--header">
           <h1 className="single__post--header__title">
@@ -30,25 +31,20 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <hr />
-        <aside>
-          <h3>The Sidebar</h3>
-          <Link to="/blog">Back to Blog</Link>
-        </aside>
         <footer className="single__post--footer">
           <Bio />
         </footer>
       </article>
-
-      <nav>
-        <ul>
-          <li>
+      <nav className="post-nav">
+        <ul className="post-nav__nav">
+          <li className="post-nav__nav--button">
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
-          <li>
+          <li className="post-nav__nav--button">
             {next && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →

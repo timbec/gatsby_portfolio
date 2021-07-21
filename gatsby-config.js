@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require("path")
 
 module.exports = {
   siteMetadata: {
@@ -12,9 +12,9 @@ module.exports = {
     },
   },
   plugins: [
-    'gatsby-plugin-resolve-src',
-    'gatsby-plugin-sass',
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-resolve-src",
+    "gatsby-plugin-sass",
+    "gatsby-plugin-react-helmet",
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -46,7 +46,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 630,
+              maxWidth: 730,
             },
           },
           {
@@ -80,6 +80,5 @@ module.exports = {
         icon: `content/assets/gatsby-icon.png`,
       },
     },
-    
   ],
 }

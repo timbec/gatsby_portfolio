@@ -2,16 +2,29 @@ footer {
   grid-column: 2/12;
   grid-row: 11/13;
   width: 100%;
-  min-height: 10rem; 
+  min-height: 10rem;
   line-height: 2em;
   color: white;
   text-align: center;
   background-color: $color-black;
 
   // For now, until footer has more content
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .bio {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 1rem 2rem;
+
+    p {
+      font-size: 1.8rem;
+      margin-top: 2.5rem;
+      margin-left: 2rem;
+    }
+  }
 
   @include respond(tab-port) {
     grid-row: 10/13;
@@ -20,5 +33,28 @@ footer {
   p {
     font-size: 1em;
     margin: 0;
+  }
+}
+
+.post-nav {
+  width: 100%;
+
+  &__nav {
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $color-black;
+
+    &--button {
+      height: 5rem;
+      padding: 0.5rem 1rem;
+
+      a {
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: white;
+      }
+    }
   }
 }
