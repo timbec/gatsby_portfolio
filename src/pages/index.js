@@ -1,62 +1,104 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import Layout from "components/Layout"
+import Container from "components/Container"
+import Image from "components/image"
 
-const IndexPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+import img_gatsby from "assets/images/client-logos/image.png"
 
+const IndexPage = () => {
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="Home Page" />
+    <Layout pageName="home">
+      <Helmet>
+        <title>Home Page</title>
+      </Helmet>
+      <Container>
+        <section id="intro" className="intro">
+          <article className="intro__text">
+            <h2>Welcome</h2>
 
-      <section id="intro">
-          <article>
-            <h1>Welcome to the latest iteration of my portoflio website</h1>
+            <p>
+              I am a Full-Stack Developer specializing in Javascript, PHP and
+              Python. I have used Wordpress, Laravel and, most recently, Django.
+              This portfolio site is my first site built in Django.
+            </p>
 
-            <p>My last portfolio was built on Django. Django was interesting but hard to configure properly to use Markdown. Since I was planning to build out the front end in some variation of React anyway, I decided to just rebuild it in Gatsby, then re-incorporate the Django backend later if it makes sense. </p>
+            <p>
+              I have been lucky to have some great clients from diverse fields,
+              including the NYTimes, EPIX TV, Weil Gotshal and Manges, Carnegie,
+              and Lazard Asset Management among others. For a full (er) list,
+              see below.
+            </p>
+
+            <p>
+              Also interested in, in no particular order, in the JAM stack,
+              Gatsby.js, Python Django framework, Data Visualization and
+              Analysis, Machine Learning, and VR/AR.
+            </p>
+
+            <p>
+              I came to web development from a background in media. I also write
+              stuff.
+            </p>
           </article>
-      </section>
-      <section id="portfolio">
-        <ul>
-          <li>Image One</li>
-          <li>Image Two</li>
-          <li>Image Three</li>
-        </ul>
-      </section>
-      <Bio />
-      
+          <article className="intro__collage">
+            <ul className="intro__collage--list">
+              <li className="intro__collage--photo">
+                <Image src={`collage-images/Writing.jpg`} />
+              </li>
+              <li className="intro__collage--photo">
+                <Image src={`collage-images/opera-slider.jpg`} />
+              </li>
+              <li className="intro__collage--photo">
+                <Image src={`collage-images/Unbearables_2.jpg`} />
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section id="portfolio" className="portfolio">
+          <h2 className="portfolio__heading">Portfolio</h2>
+          <ul className="portfolio__images">
+            <li className="portfolio__images--image one">
+              <Image src={`client-logos/new-epix-logo.png`} />
+            </li>
+            <li className="portfolio__images--image large-logo two">
+              <Image src={`client-logos/nytimes_logo.jpg`} />
+            </li>
+            <li className="portfolio__images--image large-logo three">
+              <Image src={`client-logos/millenium-full.jpg`} />
+            </li>
+            <li className="portfolio__images--image square-logo four">
+              <Image src={`client-logos/sullivan.jpg`} />
+            </li>
+
+            <li className="portfolio__images--image small-logo five">
+              <Image src={`client-logos/greatimmigrants.jpg`} />
+            </li>
+            <li className="portfolio__images--image square-logo six">
+              <Image src={`client-logos/opera-rect.png`} />
+            </li>
+            <li className="portfolio__images--image med-logo seven">
+              <Image src={`client-logos/lazard_asset_management_logo.jpg`} />
+            </li>
+            <li className="portfolio__images--image thin-logo eight">
+              <Image src={`client-logos/weil.png`} />
+            </li>
+            <li className="portfolio__images--image small-logo nine">
+              <Image src={`client-logos/wsj.jpg`} />
+            </li>
+            <li className="portfolio__images--image small-logo ten">
+              <Image src={`client-logos/nyu-law.png`} />
+            </li>
+            <li className="portfolio__images--image small-logo eleven">
+              <Image src={`client-logos/Digitas_Health_Logo.jpg`} />
+            </li>
+          </ul>
+        </section>
+      </Container>
     </Layout>
   )
 }
 
 export default IndexPage
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
-      }
-    }
-  }
-`

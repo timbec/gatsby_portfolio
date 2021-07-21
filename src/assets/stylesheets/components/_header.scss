@@ -1,0 +1,80 @@
+.site-header {
+  width: 100%;
+  color: white;
+  grid-column: 1/12;
+  grid-row: 1/2;
+  min-height: 20rem;
+  background-color: white;
+  border-bottom: 1rem solid $color-red;
+  display: grid;
+
+  @include respond(tab-port) {
+    grid-column: 2/12;
+  }
+
+  // &__title {
+  //   margin: 2rem 0;
+  // }
+
+  // &__subtitle{
+  //   font-size: 5rem;
+  // }
+  .titleContainer {
+    grid-column: 2/8;
+    grid-row: 1/2;
+  }
+
+  h1 {
+    color: $color-black; 
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-align: center;
+    margin: 0rem 0 0 0;
+
+    a {
+      color: $color-black; 
+      text-decoration: none; 
+    }
+  }
+
+  h2 {
+    margin-top: 0rem;
+    font-size: 4rem;
+    text-align: center;
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 4em;
+    line-height: 4em;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    color: white;
+    opacity: 0.8;
+    padding: 0 0.5em;
+  }
+
+  p {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+  }
+}

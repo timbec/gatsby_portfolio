@@ -1,23 +1,25 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'; 
+import { Link, graphql } from "gatsby"; 
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import { Helmet } from "react-helmet"
 
-const AboutPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+import Layout from "components/Layout"
+import Container from "components/Container"
+import Image from "components/image"
 
-  return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="About Page" />
+const AboutPage = () => {
 
-      <section>
-        <article>
-          <h1>About Me</h1>
+    return (
+        <Layout>
+        <section id="about" className="page">
+        <article className="article">
+          <h2 className="article--heading">About Me</h2>
 
-          <div className="entry-content">
+          <div className="article--body">
+            <div className="article--photo">
+              <Image src={`about/self-portrait.jpg`} />
+            </div>
+          
             <p>
               I am a full-stack developer though I tilt more toward the
               front-end. I'm proficient in Javascript, Python, and (if need be)
@@ -33,35 +35,12 @@ const AboutPage = ({ data, location }) => {
             </p>
           </div>
         </article>
+        <figure className="article--image">
+            <Image src=""></Image>
+        </figure>
       </section>
-      <Bio />
-    </Layout>
-  )
+      </Layout>
+    )
 }
 
-export default AboutPage
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
-      }
-    }
-  }
-`
+export default AboutPage; 

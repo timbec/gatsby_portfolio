@@ -1,0 +1,129 @@
+.nav {
+  position: fixed;
+  background: transparent;
+  color: $color-black;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: auto;
+  z-index: 100;
+
+  transform: translateX(-180%);
+  // transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+  transition: transform 500ms cubic-bezier(0.68, 0.55, 0.1, 0.55);
+
+  &__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    list-style: none;
+
+    &--link {
+      // not sure where these rules are being set:
+      text-decoration: none;
+      box-shadow: none;
+      color: $color-white;
+      font-weight: bold;
+      font-size: 2rem;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-red;
+      }
+    }
+  }
+}
+
+/*From Scrimba: */
+
+.nav-toggle {
+  padding: 0.5em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: auto;
+  top: 1em;
+  left: 1rem;
+  height: 4rem;
+  z-index: 1000;
+
+  @include respond(phone) {
+    left: 0.5rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.nav-open .nav {
+  display: block;
+  right: 75%;
+  background: $color-black;
+  transform: translateX(0%);
+
+  @include respond(tab-port) {
+    right: 50%;
+  }
+
+  @include respond(phone) {
+    right: 0;
+    opacity: 0.95;
+  }
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(0.625turn);
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  outline: none;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background: $color-white;
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hamburger::before {
+  top: 6px;
+}
+.hamburger::after {
+  bottom: 6px;
+}

@@ -1,7 +1,9 @@
+const path = require("path")
+
 module.exports = {
   siteMetadata: {
-    title: `Tim Beckett Web Portfolio`,
-    subtitle: `Full Stack Developer`,
+    title: `Tim Beckett`,
+    subtitle: `Developer Portfolio`,
     author: `Tim Beckett`,
     description: `Web Portfolio and blog built on the Starter Blog by Kyle Mathews`,
     siteUrl: `https://tim-beckett.com/`,
@@ -10,7 +12,19 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-sass`,
+    "gatsby-plugin-resolve-src",
+    "gatsby-plugin-sass",
+    "gatsby-plugin-react-helmet",
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,7 +46,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 730,
             },
           },
           {
@@ -47,12 +61,10 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `asdflsdkjf`,
       },
     },
     `gatsby-plugin-feed`,
@@ -68,9 +80,5 @@ module.exports = {
         icon: `content/assets/gatsby-icon.png`,
       },
     },
-    `gatsby-plugin-react-helmet`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

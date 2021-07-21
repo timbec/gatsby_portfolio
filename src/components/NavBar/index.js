@@ -9,9 +9,9 @@ import { Fragment } from "react"
 import { Link } from "gatsby"
 import Hamburger from "./hamburger"
 
-import { rhythm } from "../../utils/typography"
+// import { rhythm } from "../../utils/typography"
 
-import "./nav.scss"
+// import "./nav.scss"
 
 const NavBar = () => {
 
