@@ -1,8 +1,8 @@
 {
-  "name": "another-test-site",
+  "name": "tb-web-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "another-test-site",
+  "description": "Web Portfolio of Tim Beckett",
   "keywords": [
     "gatsby"
   ],
