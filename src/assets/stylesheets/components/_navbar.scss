@@ -56,7 +56,7 @@
   height: 4rem;
   z-index: 1000;
 
-  @include respond(phone) {
+  @include respond(tab-land) {
     left: 0.5rem;
   }
 

@@ -18,14 +18,11 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
+  padding: 1rem 3rem;
   margin-bottom: 3rem;
 
   @include respond(mobile) {
     margin-bottom: 7rem;
-  }
-
-  @include respond(tab-port) {
-    padding: 1rem 3rem;
   }
 
   &__text {
